@@ -1,6 +1,6 @@
 {
   "name": "fastify-eos",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Fastify plugin to that decorates fastify with an eosjs instance",
   "main": "plugin.js",
   "scripts": {
