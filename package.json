@@ -1,5 +1,5 @@
 {
-  "name": "@eoscostarica/fastify-eos",
+  "name": "fastify-eos",
   "version": "0.1.0",
   "description": "A Fastify plugin to that decorates fastify with an eosjs instance",
   "main": "plugin.js",
