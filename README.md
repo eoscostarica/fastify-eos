@@ -51,6 +51,19 @@ fastify.get('/info', (req, reply) => {
 // {"server_version":"75635168","chain_id":"038f4b0fc8ff18a4f0842a8f0564611f6e96e8535901dd45e43ac8691a1c4dca","head_block_num":7130132,"last_irreversible_block_num":7129812,"last_irreversible_block_id":"006ccad422bc16b20a632fa0da9dfcf2e071c56005cbf4c3c7371a8f972ce38d","head_block_id":"006ccc14d29f28d25495429def0b10a088408eddd7216d53ea4d92191e3e3602","head_block_time":"2018-07-24T01:26:54.500","head_block_producer":"eosninecatmx","virtual_block_cpu_limit":200000000,"virtual_block_net_limit":1048576000,"block_cpu_limit":199900,"block_net_limit":1048576}
 ```
 
+Registering a route handler
+
+```js
+
+const handler = async (request, reply, eos) => JSON.stringify(await eos.getInfo({}))
+
+fastify.route({
+	method: 'GET',
+	url: '/info',
+	handler: (request, reply) => handler(request, reply, fastify.eos)
+})
+```
+
 ## Bug Reporting
 
 Please report bugs big and small by [opening an issue](https://github.com/eoscostarica/fastify-eos/issues). No possible bug report is too small.
