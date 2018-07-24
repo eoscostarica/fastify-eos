@@ -1,0 +1,45 @@
+{
+  "name": "fastify-eos",
+  "version": "0.1.0",
+  "description": "A Fastify plugin to that decorates fastify with an eosjs instance",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "tap 'test/**/*.test.js'",
+    "test-ci": "tap --cov 'test/**/*.test.js'",
+    "lint": "standard | snazzy",
+    "lint-ci": "standard"
+  },
+  "precommit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fastify/eoscostarica-eos.git"
+  },
+  "keywords": [
+    "fastify",
+    "eos",
+    "eosio"
+  ],
+  "author": "eoscostarica.io - gaboesquivel.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fastify/eoscostarica-eos/issues"
+  },
+  "homepage": "https://github.com/fastify/eoscostarica-eos#readme",
+  "devDependencies": {
+    "fastify": "^1.0.0",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.0",
+    "tap": "^11.1.1"
+  },
+  "dependencies": {
+    "eosjs": "^16.0.0",
+    "fastify-plugin": "^1.0.1"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
